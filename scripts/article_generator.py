@@ -1,5 +1,10 @@
 import os
+import sys
 from argparse import ArgumentParser, Namespace
+try:
+    import markdown
+except ImportError:
+    sys.exit("cannot import markdown, install with `pip3 install markdown`")
 
 
 def load_file(path: str) -> str:
@@ -14,7 +19,15 @@ def write_file(path: str, text: str) -> None:
 
 
 def generate_article(raw_text: str) -> str:
-    return raw_text
+    body: str = markdown.markdown(raw_text)
+    article: list = ["<html>",
+                     "<head>",
+                     "</head>",
+                     "<body>",
+                     body,
+                     "</body>",
+                     "</html>"]
+    return "\n".join(article)
 
 
 def main() -> None:
