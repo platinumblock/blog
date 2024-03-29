@@ -1,0 +1,53 @@
+body{
+    font-family: "Readex Pro", sans-serif;
+}
+.blogPost{
+    width:450px;
+    height:400px;
+    position:absolute;
+    background-color:rgb(248,248,248);
+    border-radius:20px;
+}
+.blogImage{
+    position:absolute;
+    width:80%;
+    height:50%;
+    left:10%;
+    top:10%;
+    border-radius:20px;
+}
+.blogTitle{
+    position:absolute;
+    width:80%;
+    height:20%;
+    left:10%;
+    top:65%;
+    display:flex;
+    align-items:center;
+    font-size:25px;
+}
+.blogDate{
+    position:absolute;
+    width:80%;
+    height:5%;
+    left:10%;
+    top:85%;
+    color:rgb(120,120,120);
+}
+.blogAuthor{
+    position:absolute;
+    width:80%;
+    height:5%;
+    left:10%;
+    top:90%;
+    color:rgb(120,120,120);
+}
+
+#bP1{
+    left:12%;
+    top:20%;
+}
+#bP2{
+    left:52%;
+    top:20%;
+}
